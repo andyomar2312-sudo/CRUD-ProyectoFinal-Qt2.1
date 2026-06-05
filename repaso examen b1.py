@@ -17,7 +17,7 @@ def doblar(numero):
 print(doblar(numero))
 
 """def multiplicar_numeros():
-    cantidad = int(input("¿Cuántos números desea ingresar? "))
+   cantidad = int(input("¿Cuántos números desea ingresar? "))
 
     numeros = []
 
