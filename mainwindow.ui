@@ -1493,7 +1493,6 @@ border: none;</string>
      <string notr="true">QFrame {
     background-color: #F0EAE1;
     border-radius: 20px;
-    /* Simulamos el neomorfismo con bordes y sombras en Qt */
     border-top: 2px solid #FFFFFF;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid #D1C9BC;
