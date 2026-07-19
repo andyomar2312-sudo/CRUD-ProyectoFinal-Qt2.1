@@ -365,7 +365,7 @@ QHeaderView::section {
     </property>
     <property name="icon">
      <iconset resource="recursos.qrc">
-      <normaloff>:/new/prefix1/trash-removebg-preview.png</normaloff>:/new/prefix1/trash-removebg-preview.png</iconset>
+      <normaloff>:/new/prefix1/recursos/trash-removebg-preview.png</normaloff>:/new/prefix1/recursos/trash-removebg-preview.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -622,7 +622,7 @@ QHeaderView::section {
     </property>
     <property name="icon">
      <iconset resource="recursos.qrc">
-      <normaloff>:/new/prefix1/pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</normaloff>:/new/prefix1/pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</iconset>
+      <normaloff>:/new/prefix1/recursos/pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</normaloff>:/new/prefix1/recursos/pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -879,7 +879,7 @@ QHeaderView::section {
     </property>
     <property name="icon">
      <iconset resource="recursos.qrc">
-      <normaloff>:/new/prefix1/240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</normaloff>:/new/prefix1/240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</iconset>
+      <normaloff>:/new/prefix1/recursos/240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</normaloff>:/new/prefix1/recursos/240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1151,7 +1151,7 @@ QHeaderView::section {
     </property>
     <property name="icon">
      <iconset resource="recursos.qrc">
-      <normaloff>:/new/prefix1/images-removebg-preview.png</normaloff>:/new/prefix1/images-removebg-preview.png</iconset>
+      <normaloff>:/new/prefix1/recursos/images-removebg-preview.png</normaloff>:/new/prefix1/recursos/images-removebg-preview.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -1468,7 +1468,7 @@ border: none;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="recursos.qrc">:/new/prefix1/WhatsApp Image 2026-07-18 at 12.20.05 PM.png</pixmap>
+     <pixmap resource="recursos.qrc">:/new/prefix1/recursos/WhatsApp Image 2026-07-18 at 12.20.05 PM.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -1528,12 +1528,12 @@ border: none;</string>
      </property>
      <property name="icon">
       <iconset resource="recursos.qrc">
-       <normaloff>:/new/prefix1/trash-removebg-preview.png</normaloff>:/new/prefix1/trash-removebg-preview.png</iconset>
+       <normaloff>:/new/prefix1/recursos/trash-removebg-preview.png</normaloff>:/new/prefix1/recursos/trash-removebg-preview.png</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>25</width>
-       <height>25</height>
+       <width>28</width>
+       <height>28</height>
       </size>
      </property>
     </widget>
@@ -1632,7 +1632,7 @@ border: none;</string>
     </property>
     <property name="icon">
      <iconset resource="recursos.qrc">
-      <normaloff>:/new/prefix1/pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</normaloff>:/new/prefix1/pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</iconset>
+      <normaloff>:/new/prefix1/recursos/pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</normaloff>:/new/prefix1/recursos/pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</iconset>
     </property>
    </widget>
    <zorder>frame</zorder>
