@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>WhatsApp_Image_2026-07-18_at_11.46.14_AM-removebg-preview.png</file>
+        <file>WhatsApp Image 2026-07-18 at 12.20.05 PM.png</file>
+        <file>images-removebg-preview.png</file>
+        <file>240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</file>
+        <file>pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</file>
+        <file>trash-removebg-preview.png</file>
+        <file>pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</file>
+    </qresource>
+</RCC>
