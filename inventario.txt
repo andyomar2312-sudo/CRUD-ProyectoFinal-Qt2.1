@@ -1,6 +1,0 @@
-l001;Johnnie walker Black Leabel;Whisky;45.5;2025
-l002;Ron Abuelo Añejo;Ron;16.2;2024
-l003;Jose Cuervo Especial Reposado;Tequila;28.6;2025
-l004;Aguardiente Antioqueño;Aguardiente;18.5;2026
-l005;Absolut Vodka Original;Vodka;22;2025
-l006;Tanqueray London Dry Gin;Ginebra;27.5;2026
