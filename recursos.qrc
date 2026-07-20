@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>recursos/240-2402469_transparent-white-eye-simbolo-ojo-con-lagrima-hd-removebg-preview.png</file>
+        <file>recursos/images-removebg-preview.png</file>
+        <file>recursos/pngtree-luxury-liquor-bottle-with-gold-accents-png-image_21185778.png</file>
+        <file>recursos/pngtree-pencil-flat-white-color-icon-modify-edit-white-icon-vector-png-image_9756085__1_-removebg-preview.png</file>
+        <file>recursos/pngtree-vector-refresh-icon-png-image_4221993-removebg-preview.png</file>
+        <file>recursos/trash-removebg-preview.png</file>
+        <file>recursos/WhatsApp Image 2026-07-18 at 12.13.28 PM.png</file>
+        <file>recursos/WhatsApp Image 2026-07-18 at 12.20.05 PM.png</file>
+        <file>recursos/WhatsApp_Image_2026-07-18_at_11.46.14_AM-removebg-preview.png</file>
+    </qresource>
+</RCC>
