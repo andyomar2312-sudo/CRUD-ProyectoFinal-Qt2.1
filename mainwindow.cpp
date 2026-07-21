@@ -45,40 +45,15 @@ void MainWindow::actualizartabla(){
 }
 void MainWindow::on_btncrear_clicked()
 {
-    if(ui->txtcodigo->text().isEmpty() || ui->txtnombre->text().isEmpty() ||
-        ui->txtprecio->text().isEmpty() || ui->txtanio->text().isEmpty() ||
-        ui->cmbtipo->currentIndex() == -1){
-        QMessageBox::warning(this, "Error", "Por favor complete todos los campos");
-        return;
-    }
-
-    bool okPrecio, okAnio;
-    double precio = ui->txtprecio->text().toDouble(&okPrecio);
-    int anio = ui->txtanio->text().toInt(&okAnio);
-
-    if(!okPrecio || precio <= 0){
-        QMessageBox::warning(this, "Error", "El precio debe ser un número mayor a 0");
-        return;
-    }
-    if(!okAnio || anio < 1800 || anio > 2026){
-        QMessageBox::warning(this, "Error", "El año debe ser un número entre 1800 y 2026");
-        return;
-    }
-
-    // Verificar codigo duplicado
-    if(buscar(lista, ui->txtcodigo->text()) != -1){
-        QMessageBox::warning(this, "Error", "Ya existe un producto con ese código");
-        return;
-    }
-
     Producto p;
-    p.codigo = ui->txtcodigo->text();
-    p.nombre = ui->txtnombre->text();
-    p.tipo = ui->cmbtipo->currentText();
-    p.precio = precio;
-    p.anio = anio;
+    p.codigo=ui->txtcodigo->text();
+    p.nombre=ui->txtnombre->text();
+    p.tipo=ui->cmbtipo->currentText();
+    p.precio=ui->txtprecio->text().toDouble();
+    p.anio=ui->txtanio->text().toInt();
     crear(lista, p);
     actualizartabla();
+
     QMessageBox::information(this, "Correcto", "Producto agregado");
     ui->txtcodigo->clear();
     ui->txtnombre->clear();
@@ -90,11 +65,6 @@ void MainWindow::on_btncrear_clicked()
 
 void MainWindow::on_btnmostrar_clicked()
 {
-    if(ui->txtcodigo->text().isEmpty()){
-        QMessageBox::warning(this, "Error", "Ingrese un código para buscar");
-        return;
-    }
-
     QString codigo=ui->txtcodigo->text();
     leer(lista);
     ui->tableWidget->setRowCount(0);
@@ -107,6 +77,7 @@ void MainWindow::on_btnmostrar_clicked()
             ui->tableWidget->setItem(fila,2,new QTableWidgetItem(p.tipo));
             ui->tableWidget->setItem(fila,3,new QTableWidgetItem(QString::number(p.precio)));
             ui->tableWidget->setItem(fila,4,new QTableWidgetItem(QString::number(p.anio)));
+
             ui->txtcodigo->setText(p.codigo);
             ui->txtnombre->setText(p.nombre);
             ui->cmbtipo->setCurrentText(p.tipo);
@@ -116,77 +87,54 @@ void MainWindow::on_btnmostrar_clicked()
         }
     }
     QMessageBox::warning(this,"buscar", "producto no encontrado");
+
 }
+
 
 
 void MainWindow::on_btnmodificar_clicked()
 {
-    if(ui->txtcodigo->text().isEmpty() || ui->txtnombre->text().isEmpty() ||
-        ui->txtprecio->text().isEmpty() || ui->txtanio->text().isEmpty() ||
-        ui->cmbtipo->currentIndex() == -1){
-        QMessageBox::warning(this, "Error", "Por favor complete todos los campos");
-        return;
-    }
-
-    bool okPrecio, okAnio;
-    double precio = ui->txtprecio->text().toDouble(&okPrecio);
-    int anio = ui->txtanio->text().toInt(&okAnio);
-
-    if(!okPrecio || precio <= 0){
-        QMessageBox::warning(this, "Error", "El precio debe ser un número mayor a 0");
-        return;
-    }
-    if(!okAnio || anio < 1800 || anio > 2026){
-        QMessageBox::warning(this, "Error", "El año debe ser un número entre 1800 y 2026");
-        return;
-    }
-
-    QString codigo = ui->txtcodigo->text();
+    QString codigo= ui->txtcodigo->text();
     Producto p;
-    p.codigo = codigo;
-    p.nombre = ui->txtnombre->text();
-    p.tipo = ui->cmbtipo->currentText();
-    p.precio = precio;
-    p.anio = anio;
+    p.codigo=ui->txtcodigo->text();
+    p.nombre=ui->txtnombre->text();
+    p.tipo=ui->cmbtipo->currentText();
+    p.precio=ui->txtprecio->text().toDouble();
+    p.anio=ui->txtanio->text().toInt();
     leer(lista);
-    if(modificar(lista, codigo, p)){
+    if(modificar(lista, codigo,p)){
         leer(lista);
         actualizartabla();
-        QMessageBox::information(this, "Modificar", "Producto actualizado");
-    } else {
-        QMessageBox::warning(this, "Modificar", "Código no encontrado");
+        QMessageBox::information(this, "modificar","producto actualizado");
+    }else{
+        QMessageBox::warning(this,"modificar","codigo no encontrado");
     }
+
 }
+
 
 
 
 void MainWindow::on_btneliminar_clicked()
 {
-    if(ui->txtcodigo->text().isEmpty()){
-        QMessageBox::warning(this, "Error", "Ingrese un código para eliminar");
-        return;
-    }
+    QString codigo= ui->txtcodigo->text();
 
-    QMessageBox::StandardButton confirmacion = QMessageBox::question(
-        this, "Confirmar", "¿Está seguro que desea eliminar este producto?",
-        QMessageBox::Yes | QMessageBox::No);
-
-    if(confirmacion == QMessageBox::No) return;
-
-    QString codigo = ui->txtcodigo->text();
-    if(eliminar(lista, codigo)){
+    if(eliminar(lista, codigo))
+    {
         leer(lista);
         actualizartabla();
-        QMessageBox::information(this, "Eliminar", "Producto eliminado");
+        QMessageBox::information(this ,"eliminar","producto eliminado");
         ui->txtcodigo->clear();
         ui->txtnombre->clear();
         ui->txtprecio->clear();
         ui->txtanio->clear();
         ui->cmbtipo->setCurrentIndex(-1);
-    } else {
-        QMessageBox::warning(this, "Eliminar", "Código no encontrado");
+    }
+    else{
+        QMessageBox::warning(this ,"eliminar","codigo no encontrado");
     }
 }
+
 
 void MainWindow::on_btnrefrescar_clicked()
 {
